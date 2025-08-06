@@ -3,24 +3,22 @@ import './App.css';
 
 function App() {
 
-  const handleMove = (e) =>{
-
-    const player = document.querySelector('.player')
-    
-    console.log(e.clientX)
-    console.log(player)
+  const change = (e) =>{
+   
     console.log(e)
-
-
-    // const playerX = e.clientX
-    // const playerY = e.clientY
-
-    player.classList.add('.newPosition')
-
-    // console.log(playerX , playerY)
+    player.style.backgroundColor = 'green'
+  }
 
     
-  }
+   const player = document.querySelector('.player')
+    player.addEventListener('click' , () => {
+      change()
+    })
+
+
+
+    
+  
 
   
 
@@ -28,7 +26,7 @@ function App() {
   
   return (
     <div className="App" >
-     <div className="player" onClick={handleMove}></div>
+     <div className="player"></div>
     </div>
   );
 }
