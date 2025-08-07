@@ -49,7 +49,7 @@ function App() {
      <p>{cordinatesY}</p>
 
      <input type="file" onChange={handleUploadFile}></input>
-     <img src={file} alt=""></img>
+     <img className='imageUpload' src={file} alt="" ></img>
 
     </div>
   );
