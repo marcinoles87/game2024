@@ -7,7 +7,7 @@ function App() {
   const [cordinatesX , setCordinatesX] = useState('')
   const [cordinatesY , setCordinatesY] = useState('')
 
-  document.addEventListener( 'mousemove' , (e) =>{
+  document.addEventListener( 'click' , (e) =>{
     setCordinatesX(e.clientX)
     setCordinatesY(e.clientY)
 
