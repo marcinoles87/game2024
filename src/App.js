@@ -6,6 +6,7 @@ function App() {
 
   const [cordinatesX , setCordinatesX] = useState('')
   const [cordinatesY , setCordinatesY] = useState('')
+  const [file , setFileImg] = useState('');
 
   document.addEventListener( 'click' , (e) =>{
     setCordinatesX(e.clientX)
@@ -33,6 +34,11 @@ function App() {
 
   }
 
+  const handleUploadFile = (e) =>{
+        setFileImg(URL.createObjectURL(e.target.files[0]))
+
+  }
+
     
    
 
@@ -41,6 +47,10 @@ function App() {
      <div className="player" ></div>
      <p>{cordinatesX}</p>
      <p>{cordinatesY}</p>
+
+     <input type="file" onChange={handleUploadFile}></input>
+     <img src={file} alt=""></img>
+
     </div>
   );
 }

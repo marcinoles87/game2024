@@ -21,3 +21,8 @@
   left: 100px;
   transform: translate(100px,100px);
 }
+
+.imageUpload{
+  width: 300px;
+  height: 300px;
+}
