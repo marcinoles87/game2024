@@ -10,6 +10,10 @@ function App() {
   document.addEventListener( 'mousemove' , (e) =>{
     setCordinatesX(e.clientX)
     setCordinatesY(e.clientY)
+
+        const player = document.querySelector('.player')
+        player.style.cssText = `transform:translate(${cordinatesX}px,${cordinatesY}px)`
+
   })
 
   const change = (e) =>{
@@ -17,6 +21,7 @@ function App() {
     const player = document.querySelector('.player')
 
     console.log(e)
+    console.log(player)
 
     const x = e.clientX;
     const y = e.clientY;
@@ -24,7 +29,7 @@ function App() {
     const newX = x+move;
     console.log(newX)
     player.style.backgroundColor = 'green'
-    player.movementX = `${newX}`
+    player.style.cssText = `transform(translate(${cordinatesX}px,${cordinatesY})) ; color = red`
 
   }
 
