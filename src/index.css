@@ -9,6 +9,11 @@
   flex-direction: column;
 }
 
+input{
+  width: 100px;
+  margin: 10px;
+}
+
 
 .player{
   position: absolute;
