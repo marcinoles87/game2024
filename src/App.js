@@ -42,9 +42,11 @@ function App() {
   }
 
   const changeBrightnes = (e) =>{
-
     imageUpload.style.cssText = `filter: brightness(0.${e.target.value})`
+  }
 
+  const changeContrast = (e) =>{
+    imageUpload.style.cssText = `filter: contrast(0.${e.target.value})`
   }
 
     
@@ -57,6 +59,7 @@ function App() {
      <p>{cordinatesY}</p>
 
      <input type="range" min={0} max={99} id='jasnosc'  onChange={changeBrightnes}></input>
+     <input type="range" min={0} max={99} id='jasnosc'  onChange={changeContrast}></input>
     
 
      <input type="file" onChange={handleUploadFile}></input>
