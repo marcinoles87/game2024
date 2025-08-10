@@ -10,14 +10,14 @@ function App() {
 
   const imageUpload = document.querySelector('.imageUpload')
 
-  document.addEventListener( 'click' , (e) =>{
-    setCordinatesX(e.clientX)
-    setCordinatesY(e.clientY)
+  // document.addEventListener( 'click' , (e) =>{
+  //   setCordinatesX(e.clientX)
+  //   setCordinatesY(e.clientY)
 
-    const player = document.querySelector('.player')
-    player.style.cssText = `transform:translate(${cordinatesX}px,${cordinatesY}px)`
+  //   const player = document.querySelector('.player')
+  //   player.style.cssText = `transform:translate(${cordinatesX}px,${cordinatesY}px)`
 
-  })
+  // })
 
   const change = (e) =>{
     
@@ -42,24 +42,29 @@ function App() {
   }
 
   const changeBrightnes = (e) =>{
-    imageUpload.style.cssText = `filter: brightness(0.${e.target.value})`
+    imageUpload.style.cssText += `filter: brightness(0.${e.target.value})`
   }
 
   const changeContrast = (e) =>{
-    imageUpload.style.cssText = `filter: contrast(0.${e.target.value})`
+    imageUpload.style.cssText += `filter: contrast(0.${e.target.value})`
+  }
+
+   const changeBlur = (e) =>{
+    imageUpload.style.cssText += `filter: blur(${e.target.value}px)`
   }
 
     
    
 
   return (
-    <div className="App" onClick={change}>
-     <div className="player" ></div>
+    <div className="App" >
+     {/* <div className="player" ></div> */}
      <p>{cordinatesX}</p>
      <p>{cordinatesY}</p>
 
      <input type="range" min={0} max={99} id='jasnosc'  onChange={changeBrightnes}></input>
-     <input type="range" min={0} max={99} id='jasnosc'  onChange={changeContrast}></input>
+     <input type="range" min={0} max={99} id='kontrast'  onChange={changeContrast}></input>
+     <input type="range" min={0} max={99} id='blur'  onChange={changeBlur}></input>
     
 
      <input type="file" onChange={handleUploadFile}></input>
