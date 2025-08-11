@@ -42,7 +42,7 @@ function App() {
   }
 
   const changeBrightnes = (e) =>{
-    imageUpload.style.cssText += `filter: brightness(0.${e.target.value})`
+    imageUpload.setAttribute('style' , `filter: brightness(0.${e.target.value})`)
   }
 
   const changeContrast = (e) =>{
