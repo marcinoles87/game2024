@@ -64,7 +64,7 @@ function App() {
 
      <input type="range" min={0} max={99} id='jasnosc'  onChange={changeBrightnes}></input>
      <input type="range" min={0} max={99} id='kontrast'  onChange={changeContrast}></input>
-     <input type="range" min={0} max={99} id='blur'  onChange={changeBlur}></input>
+     <input type="range" min={0} max={10} id='blur'  onChange={changeBlur}></input>
     
 
      <input type="file" onChange={handleUploadFile}></input>
