@@ -45,31 +45,27 @@ function App() {
 
   }
 
-  const changeFilter = (e) =>{
-
+  const changeBrightness = (e) =>{
     setBrightness(e.target.value)
-    setContrast(e.target.value)
-    setBlur(e.target.value)
-    // imageUpload.setAttribute('style' , `filter: brightness(0.${brightness})`)
-    imageUpload.style.filter = 
-
-    `brightness(0.${brightness})
-    filter: contrast(0.${contrast})
-    filter: blur(${blur}px)`
-
-    console.log(brightness , contrast , blur)
-
-    
+    imageUpload.style.cssText = `filter: brightness(${brightness})`
+    imageUpload.style.cssText = `filter: contrast(${contrast})`
+    imageUpload.style.cssText = `filter: blur(${blur}px)`
   }
+
+ 
 
   const changeContrast = (e) =>{
     setContrast(e.target.value)
-    imageUpload.style.cssText += `filter: contrast(0.${contrast})`
+     imageUpload.style.cssText = `filter: brightness(${brightness})`
+    imageUpload.style.cssText = `filter: contrast(${contrast})`
+    imageUpload.style.cssText = `filter: blur(${blur}px)`
   }
 
    const changeBlur = (e) =>{
     setBlur(e.target.value)
-    imageUpload.style.cssText += `filter: blur(${blur}px)`
+     imageUpload.style.cssText = `filter: brightness(${brightness})`
+    imageUpload.style.cssText = `filter: contrast(${contrast})`
+    imageUpload.style.cssText = `filter: blur(${blur}px)`
   }
 
     
@@ -82,14 +78,14 @@ function App() {
      <p>{cordinatesY}</p>
 
     
-     <input type="range" min={0} max={99} id='jasnosc'  onChange={changeFilter}></input>
+     <input type="range" min={0} max={99} id='jasnosc' onChange={changeBrightness}></input>
      <label for="jasnosc">Jasność</label>
      
      
-     <input type="range" min={0} max={99} id='kontrast'  onChange={changeFilter}></input>
+     <input type="range" min={0} max={99} id='kontrast'  onChange={changeContrast}></input>
      <label for="kontrast">Kontrast</label>
 
-     <input type="range" min={0} max={10} id='blur'  onChange={changeFilter}></input>
+     <input type="range" min={0} max={10} id='blur'  onChange={changeBlur}></input>
      <label for="blur">Rozmycie</label>
     
 
