@@ -62,9 +62,16 @@ function App() {
      <p>{cordinatesX}</p>
      <p>{cordinatesY}</p>
 
+    
      <input type="range" min={0} max={99} id='jasnosc'  onChange={changeBrightnes}></input>
+     <label for="jasnosc">Jasność</label>
+     
+     
      <input type="range" min={0} max={99} id='kontrast'  onChange={changeContrast}></input>
+     <label for="kontrast">Kontrast</label>
+
      <input type="range" min={0} max={10} id='blur'  onChange={changeBlur}></input>
+     <label for="blur">Rozmycie</label>
     
 
      <input type="file" onChange={handleUploadFile}></input>
