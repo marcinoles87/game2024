@@ -47,24 +47,24 @@ function App() {
 
   const changeBrightness = (e) =>{
     setBrightness(e.target.value)
-    imageUpload.style.cssText = `filter: brightness(${brightness}px)`
-    imageUpload.style.cssText = `filter: contrast(${contrast}px)`
-    imageUpload.style.cssText = `filter: blur(${blur}px)`
+    imageUpload.style.cssText = `filter: brightness(0.${brightness})`
+    // imageUpload.style.cssText = `filter: contrast(${contrast}px)`
+    // imageUpload.style.cssText = `filter: blur(${blur}px)`
   }
 
  
 
   const changeContrast = (e) =>{
     setContrast(e.target.value)
-     imageUpload.style.cssText = `filter: brightness(${brightness}px)`
-    imageUpload.style.cssText = `filter: contrast(${contrast}px)`
-    imageUpload.style.cssText = `filter: blur(${blur}px)`
+    //  imageUpload.style.cssText = `filter: brightness(${brightness}px)`
+    imageUpload.style.cssText = `filter: contrast(0.${contrast}px)`
+    // imageUpload.style.cssText = `filter: blur(${blur}px)`
   }
 
    const changeBlur = (e) =>{
     setBlur(e.target.value)
-     imageUpload.style.cssText = `filter: brightness(${brightness}px)`
-    imageUpload.style.cssText = `filter: contrast(${contrast}px)`
+    //  imageUpload.style.cssText = `filter: brightness(${brightness}px)`
+    // imageUpload.style.cssText = `filter: contrast(${contrast}px)`
     imageUpload.style.cssText = `filter: blur(${blur}px)`
   }
 
