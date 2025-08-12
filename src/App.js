@@ -6,7 +6,7 @@ function App() {
 
   const [cordinatesX , setCordinatesX] = useState('')
   const [cordinatesY , setCordinatesY] = useState('')
-  const [file , setFileImg] = useState('');
+  const [file , setFileImg] = useState(null);
 
   const [brightness , setBrightness] = useState('')
   const [contrast , setContrast] = useState('')
@@ -47,8 +47,8 @@ function App() {
 
   const changeBrightness = (e) =>{
     setBrightness(e.target.value)
-    imageUpload.style.cssText = `filter: brightness(${brightness})`
-    imageUpload.style.cssText = `filter: contrast(${contrast})`
+    imageUpload.style.cssText = `filter: brightness(${brightness}px)`
+    imageUpload.style.cssText = `filter: contrast(${contrast}px)`
     imageUpload.style.cssText = `filter: blur(${blur}px)`
   }
 
@@ -56,15 +56,15 @@ function App() {
 
   const changeContrast = (e) =>{
     setContrast(e.target.value)
-     imageUpload.style.cssText = `filter: brightness(${brightness})`
-    imageUpload.style.cssText = `filter: contrast(${contrast})`
+     imageUpload.style.cssText = `filter: brightness(${brightness}px)`
+    imageUpload.style.cssText = `filter: contrast(${contrast}px)`
     imageUpload.style.cssText = `filter: blur(${blur}px)`
   }
 
    const changeBlur = (e) =>{
     setBlur(e.target.value)
-     imageUpload.style.cssText = `filter: brightness(${brightness})`
-    imageUpload.style.cssText = `filter: contrast(${contrast})`
+     imageUpload.style.cssText = `filter: brightness(${brightness}px)`
+    imageUpload.style.cssText = `filter: contrast(${contrast}px)`
     imageUpload.style.cssText = `filter: blur(${blur}px)`
   }
 
