@@ -45,10 +45,21 @@ function App() {
 
   }
 
-  const changeBrightnes = (e) =>{
+  const changeFilter = (e) =>{
 
     setBrightness(e.target.value)
-    imageUpload.setAttribute('style' , `filter: brightness(0.${brightness})`)
+    setContrast(e.target.value)
+    setBlur(e.target.value)
+    // imageUpload.setAttribute('style' , `filter: brightness(0.${brightness})`)
+    imageUpload.style.filter = 
+
+    `brightness(0.${brightness})
+    filter: contrast(0.${contrast})
+    filter: blur(${blur}px)`
+
+    console.log(brightness , contrast , blur)
+
+    
   }
 
   const changeContrast = (e) =>{
@@ -71,14 +82,14 @@ function App() {
      <p>{cordinatesY}</p>
 
     
-     <input type="range" min={0} max={99} id='jasnosc'  onChange={changeBrightnes}></input>
+     <input type="range" min={0} max={99} id='jasnosc'  onChange={changeFilter}></input>
      <label for="jasnosc">Jasność</label>
      
      
-     <input type="range" min={0} max={99} id='kontrast'  onChange={changeContrast}></input>
+     <input type="range" min={0} max={99} id='kontrast'  onChange={changeFilter}></input>
      <label for="kontrast">Kontrast</label>
 
-     <input type="range" min={0} max={10} id='blur'  onChange={changeBlur}></input>
+     <input type="range" min={0} max={10} id='blur'  onChange={changeFilter}></input>
      <label for="blur">Rozmycie</label>
     
 
