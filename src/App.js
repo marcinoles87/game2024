@@ -8,6 +8,10 @@ function App() {
   const [cordinatesY , setCordinatesY] = useState('')
   const [file , setFileImg] = useState('');
 
+  const [brightness , setBrightness] = useState('')
+  const [contrast , setContrast] = useState('')
+  const [blur , setBlur] = useState('')
+
   const imageUpload = document.querySelector('.imageUpload')
 
   // document.addEventListener( 'click' , (e) =>{
@@ -42,15 +46,19 @@ function App() {
   }
 
   const changeBrightnes = (e) =>{
-    imageUpload.setAttribute('style' , `filter: brightness(0.${e.target.value})`)
+
+    setBrightness(e.target.value)
+    imageUpload.setAttribute('style' , `filter: brightness(0.${brightness})`)
   }
 
   const changeContrast = (e) =>{
-    imageUpload.style.cssText += `filter: contrast(0.${e.target.value})`
+    setContrast(e.target.value)
+    imageUpload.style.cssText += `filter: contrast(0.${contrast})`
   }
 
    const changeBlur = (e) =>{
-    imageUpload.style.cssText += `filter: blur(${e.target.value}px)`
+    setBlur(e.target.value)
+    imageUpload.style.cssText += `filter: blur(${blur}px)`
   }
 
     
