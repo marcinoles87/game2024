@@ -53,7 +53,7 @@ function App() {
   }
 
   const changeBrightness = () =>{
-    imageUpload.style.cssText = `filter: brightness(0.${jasnosc.value} ) ; filter: blur(0.${blurS.value})`
+    imageUpload.style.filter= `blur(${blurS.value}px) contrast(${kontrast.value}%) brightness(${jasnosc.value}%)`
     
      console.log(jasnosc.value)
      console.log(blurS.value)
@@ -86,14 +86,14 @@ function App() {
 
     
      <input type="range" min={0} max={99} id='jasnosc'  onChange={changeBrightness}></input>
-     <label for="jasnosc">Jasność</label>
+     <label htmlFor="jasnosc">Jasność</label>
      
      
-     <input type="range" min={0} max={99} id='kontrast'  onChange={changeBrightness}></input>
-     <label for="kontrast">Kontrast</label>
+     <input type="range" min={0} max={200} id='kontrast'  onChange={changeBrightness}></input>
+     <label htmlFor="kontrast">Kontrast</label>
 
      <input type="range" min={0} max={10} id='blur'  onChange={changeBrightness}></input>
-     <label for="blur">Rozmycie</label>
+     <label htmlFor="blur">Rozmycie</label>
     
 
      <input type="file" onChange={handleUploadFile}></input>
