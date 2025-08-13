@@ -12,7 +12,12 @@ function App() {
   const [contrast , setContrast] = useState('')
   const [blur , setBlur] = useState('')
 
-  const imageUpload = document.querySelector('.imageUpload')
+  const imageUpload = document.querySelector('.imageUpload');
+  const jasnosc = document.querySelector('#jasnosc');
+  const kontrast = document.querySelector('#kontrast');
+  const blurS = document.querySelector('#blur')
+
+ 
 
   // document.addEventListener( 'click' , (e) =>{
   //   setCordinatesX(e.clientX)
@@ -22,6 +27,8 @@ function App() {
   //   player.style.cssText = `transform:translate(${cordinatesX}px,${cordinatesY}px)`
 
   // })
+
+
 
   const change = (e) =>{
     
@@ -45,11 +52,11 @@ function App() {
 
   }
 
-  const changeBrightness = (e) =>{
-    setBrightness(e.target.value)
-    imageUpload.style.cssText = `filter: brightness(0.${brightness})`
-    // imageUpload.style.cssText = `filter: contrast(${contrast}px)`
-    // imageUpload.style.cssText = `filter: blur(${blur}px)`
+  const changeBrightness = () =>{
+    imageUpload.style.cssText = `filter: brightness(0.${jasnosc.value} ) ; filter: blur(0.${blurS.value})`
+    
+     console.log(jasnosc.value)
+     console.log(blurS.value)
   }
 
  
@@ -78,14 +85,14 @@ function App() {
      <p>{cordinatesY}</p>
 
     
-     <input type="range" min={0} max={99} id='jasnosc' onChange={changeBrightness}></input>
+     <input type="range" min={0} max={99} id='jasnosc'  onChange={changeBrightness}></input>
      <label for="jasnosc">Jasność</label>
      
      
-     <input type="range" min={0} max={99} id='kontrast'  onChange={changeContrast}></input>
+     <input type="range" min={0} max={99} id='kontrast'  onChange={changeBrightness}></input>
      <label for="kontrast">Kontrast</label>
 
-     <input type="range" min={0} max={10} id='blur'  onChange={changeBlur}></input>
+     <input type="range" min={0} max={10} id='blur'  onChange={changeBrightness}></input>
      <label for="blur">Rozmycie</label>
     
 
