@@ -83,10 +83,12 @@ function App() {
   return (
     <div className="App" >
      {/* <div className="player" ></div> */}
-     <p>{cordinatesX}</p>
-     <p>{cordinatesY}</p>
+     
+
 
     <div className='inputs-container'>
+
+      <h2>Zaprojektur swój avatar na insta</h2>
 
       <input type="range" min={0} max={99} id='jasnosc'  onChange={changeBrightness}></input>
      <label htmlFor="jasnosc">Jasność</label>
@@ -98,7 +100,7 @@ function App() {
      <input type="range" min={0} max={10} id='blur'  onChange={changeBrightness}></input>
      <label htmlFor="blur">Rozmycie</label>
 
-     <input type="range" min={0} max={400} id='border-radius' onChange={changeBrightness}></input>
+     <input type="range" min={0} max={400}  id='border-radius' onChange={changeBrightness}></input>
 
     </div>
     
