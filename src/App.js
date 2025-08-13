@@ -15,7 +15,8 @@ function App() {
   const imageUpload = document.querySelector('.imageUpload');
   const jasnosc = document.querySelector('#jasnosc');
   const kontrast = document.querySelector('#kontrast');
-  const blurS = document.querySelector('#blur')
+  const blurS = document.querySelector('#blur');
+  const borderRadius = document.querySelector('#border-radius');
 
  
 
@@ -54,6 +55,7 @@ function App() {
 
   const changeBrightness = () =>{
     imageUpload.style.filter= `blur(${blurS.value}px) contrast(${kontrast.value}%) brightness(${jasnosc.value}%)`
+    imageUpload.style.borderRadius = `${borderRadius.value}px`
     
      console.log(jasnosc.value)
      console.log(blurS.value)
@@ -84,8 +86,9 @@ function App() {
      <p>{cordinatesX}</p>
      <p>{cordinatesY}</p>
 
-    
-     <input type="range" min={0} max={99} id='jasnosc'  onChange={changeBrightness}></input>
+    <div className='inputs-container'>
+
+      <input type="range" min={0} max={99} id='jasnosc'  onChange={changeBrightness}></input>
      <label htmlFor="jasnosc">Jasność</label>
      
      
@@ -94,10 +97,21 @@ function App() {
 
      <input type="range" min={0} max={10} id='blur'  onChange={changeBrightness}></input>
      <label htmlFor="blur">Rozmycie</label>
-    
 
-     <input type="file" onChange={handleUploadFile}></input>
+     <input type="range" min={0} max={400} id='border-radius' onChange={changeBrightness}></input>
+
+    </div>
+    
+   
+    <div className='image-container'>
+
+     
      <img className='imageUpload' src={file} alt="" ></img>
+      <input type="file" onChange={handleUploadFile}></input>
+
+    </div>
+
+     
 
     </div>
   );
