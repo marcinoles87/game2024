@@ -97,10 +97,11 @@ function App() {
      <input type="range" min={0} max={200} id='kontrast'  onChange={changeBrightness}></input>
      <label htmlFor="kontrast">Kontrast</label>
 
-     <input type="range" min={0} max={10} id='blur'  onChange={changeBrightness}></input>
+     <input type="range" min={0} max={10} id='blur' value={0}  onChange={changeBrightness}></input>
      <label htmlFor="blur">Rozmycie</label>
 
      <input type="range" min={0} max={400}  id='border-radius' onChange={changeBrightness}></input>
+     <label htmlFor="radius">Zaokrąglenie</label>
 
     </div>
     
