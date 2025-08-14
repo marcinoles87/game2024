@@ -8,9 +8,9 @@ function App() {
   const [cordinatesY , setCordinatesY] = useState('')
   const [file , setFileImg] = useState(null);
 
-  const [brightness , setBrightness] = useState('')
+  const [brightness , setBrightness] = useState('100')
   const [contrast , setContrast] = useState('')
-  const [blur , setBlur] = useState('')
+  const [blur , setBlur] = useState('0')
 
   const imageUpload = document.querySelector('.imageUpload');
   const jasnosc = document.querySelector('#jasnosc');
@@ -54,7 +54,9 @@ function App() {
   }
 
   const changeBrightness = () =>{
-    imageUpload.style.filter= `blur(${blurS.value}px) contrast(${kontrast.value}%) brightness(${jasnosc.value}%)`
+    setBlur(blurS.value)
+    setBrightness(jasnosc.value)
+    imageUpload.style.filter= `blur(${blur}px) contrast(${kontrast.value}%) brightness(${brightness}%)`
     imageUpload.style.borderRadius = `${borderRadius.value}px`
     
      console.log(jasnosc.value)
@@ -97,7 +99,7 @@ function App() {
      <input type="range" min={0} max={200} id='kontrast'  onChange={changeBrightness}></input>
      <label htmlFor="kontrast">Kontrast</label>
 
-     <input type="range" min={0} max={10} id='blur' value={0}  onChange={changeBrightness}></input>
+     <input type="range" min={0} max={10} id='blur'  onChange={changeBrightness}></input>
      <label htmlFor="blur">Rozmycie</label>
 
      <input type="range" min={0} max={400}  id='border-radius' onChange={changeBrightness}></input>
