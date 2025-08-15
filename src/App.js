@@ -87,23 +87,29 @@ function App() {
      {/* <div className="player" ></div> */}
      
 
+    <div className='header'>
+      <h1>PROJECT</h1>
+      <h2>YOUR OWN</h2>
+      <h1>AVATAR</h1>
+      <p>INSTA x FACEBOOK x AVATARMODE</p>
+    </div>
 
     <div className='inputs-container'>
 
-      <h2>Zaprojektur swój avatar na insta</h2>
+      
 
       <input type="range" min={0} max={99} id='jasnosc'  onChange={changeBrightness}></input>
-     <label htmlFor="jasnosc">Jasność</label>
+     <label htmlFor="jasnosc">Brightness</label>
      
      
      <input type="range" min={0} max={200} id='kontrast'  onChange={changeBrightness}></input>
-     <label htmlFor="kontrast">Kontrast</label>
+     <label htmlFor="kontrast">Contrast</label>
 
      <input type="range" min={0} max={10} id='blur'  onChange={changeBrightness}></input>
-     <label htmlFor="blur">Rozmycie</label>
+     <label htmlFor="blur">Blur</label>
 
      <input type="range" min={0} max={400}  id='border-radius' onChange={changeBrightness}></input>
-     <label htmlFor="radius">Zaokrąglenie</label>
+     <label htmlFor="radius">Radius</label>
 
     </div>
     
