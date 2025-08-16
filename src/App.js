@@ -9,7 +9,7 @@ function App() {
   const [file , setFileImg] = useState(null);
 
   const [brightness , setBrightness] = useState('100')
-  const [contrast , setContrast] = useState('50')
+  const [contrast , setContrast] = useState('100')
   const [blur , setBlur] = useState('0')
   const [grayScale , setGrayscale] = useState('50');
 
@@ -60,7 +60,7 @@ function App() {
     setBrightness(jasnosc.value)
     setContrast(kontrast.value)
     setGrayscale(grayscale.value)
-    imageUpload.style.filter= `blur(${blur}px) contrast(${contrast}%) brightness(${brightness}%) grayscale(${grayScale})`
+    imageUpload.style.filter= `blur(${blur}px) contrast(${contrast}%) brightness(${brightness}%) grayscale(0.${grayScale})`
     imageUpload.style.borderRadius = `${borderRadius.value}px`
     
      console.log(jasnosc.value)
@@ -115,11 +115,11 @@ function App() {
 
 
      <label htmlFor="blur">Blur</label>
-          <input type="range" min={0} max={10} id='blur'  onChange={changeBrightness}/>
+          <input type="range" min={0} max={10} id='blur' value={blur}  onChange={changeBrightness}/>
 
 
      <label htmlFor="radius">Radius</label>
-          <input type="range" min={0} max={400}  id='border-radius' onChange={changeBrightness}/>
+          <input type="range" min={0} max={200}  id='border-radius' onChange={changeBrightness}/>
 
 
     </div>
