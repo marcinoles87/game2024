@@ -9,15 +9,16 @@ function App() {
   const [file , setFileImg] = useState(null);
 
   const [brightness , setBrightness] = useState('100')
-  const [contrast , setContrast] = useState('')
+  const [contrast , setContrast] = useState('50')
   const [blur , setBlur] = useState('0')
+  const [grayScale , setGrayscale] = useState('50');
 
   const imageUpload = document.querySelector('.imageUpload');
   const jasnosc = document.querySelector('#jasnosc');
   const kontrast = document.querySelector('#kontrast');
   const blurS = document.querySelector('#blur');
   const borderRadius = document.querySelector('#border-radius');
-  const grayScale = document.querySelector('#skala-szarosci');
+  const grayscale = document.querySelector('#skala-szarosci');
 
  
 
@@ -57,7 +58,9 @@ function App() {
   const changeBrightness = () =>{
     setBlur(blurS.value)
     setBrightness(jasnosc.value)
-    imageUpload.style.filter= `blur(${blur}px) contrast(${kontrast.value}%) brightness(${brightness}%) grayscale(${grayScale.value})`
+    setContrast(kontrast.value)
+    setGrayscale(grayscale.value)
+    imageUpload.style.filter= `blur(${blur}px) contrast(${contrast}%) brightness(${brightness}%) grayscale(${grayScale})`
     imageUpload.style.borderRadius = `${borderRadius.value}px`
     
      console.log(jasnosc.value)
@@ -98,22 +101,26 @@ function App() {
     <div className='inputs-container'>
 
       
-
+      
+      <label htmlFor="jasnosc">Brightness</label>
       <input type="range" min={0} max={99} id='jasnosc'  onChange={changeBrightness}/>
-     <label htmlFor="jasnosc">Brightness</label>
 
+      <label htmlFor="skala-szarosci">Grayscale</label>
      <input type="range" min={0} max={99} id='skala-szarosci' onChange={changeBrightness}/>
-     <label htmlFor="skala-szarosci">Grayscale</label>
      
      
-     <input type="range" min={0} max={200} id='kontrast'  onChange={changeBrightness}/>
+     
      <label htmlFor="kontrast">Contrast</label>
+          <input type="range" min={0} max={200} id='kontrast'  onChange={changeBrightness}/>
 
-     <input type="range" min={0} max={10} id='blur'  onChange={changeBrightness}/>
+
      <label htmlFor="blur">Blur</label>
+          <input type="range" min={0} max={10} id='blur'  onChange={changeBrightness}/>
 
-     <input type="range" min={0} max={400}  id='border-radius' onChange={changeBrightness}/>
+
      <label htmlFor="radius">Radius</label>
+          <input type="range" min={0} max={400}  id='border-radius' onChange={changeBrightness}/>
+
 
     </div>
     
