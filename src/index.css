@@ -15,22 +15,33 @@
   width: 40%;
   height: 100vh;
   background-color: blueviolet;
+  background-image: url('./img/imageback.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: grayscale(0.9);  
 }
 
 .header h1{
   font-size:6rem;
   color:white;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  text-shadow: 7px 4px 10px black;
 }
 
 .header h2{
   font-size: 3rem;
-  color: rgb(255, 119, 65);
+  color: white;
+  letter-spacing: 10px;
+    text-shadow: 7px 4px 10px black;
+
 }
 
 .header p{
   font-size: 2rem;
-  color:black;
+  letter-spacing: 2px;
+  color:white;
+    text-shadow: 7px 4px 10px black;
+
 }
 
 
