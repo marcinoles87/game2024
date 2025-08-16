@@ -55,7 +55,7 @@ function App() {
 
   }
 
-  const changeBrightness = () =>{
+  const changeFilter = () =>{
     setBlur(blurS.value)
     setBrightness(jasnosc.value)
     setContrast(kontrast.value)
@@ -78,8 +78,6 @@ function App() {
 
    const changeBlur = (e) =>{
     setBlur(e.target.value)
-    //  imageUpload.style.cssText = `filter: brightness(${brightness}px)`
-    // imageUpload.style.cssText = `filter: contrast(${contrast}px)`
     imageUpload.style.cssText = `filter: blur(${blur}px)`
   }
 
@@ -103,23 +101,23 @@ function App() {
       
       
       <label htmlFor="jasnosc">Brightness</label>
-      <input type="range" min={0} max={99} id='jasnosc'  onChange={changeBrightness}/>
+      <input type="range" min={0} max={99} id='jasnosc'  onChange={changeFilter}/>
 
       <label htmlFor="skala-szarosci">Grayscale</label>
-     <input type="range" min={0} max={99} id='skala-szarosci' onChange={changeBrightness}/>
+     <input type="range" min={0} max={99} id='skala-szarosci' onChange={changeFilter}/>
      
      
      
      <label htmlFor="kontrast">Contrast</label>
-          <input type="range" min={0} max={200} id='kontrast'  onChange={changeBrightness}/>
+          <input type="range" min={0} max={200} id='kontrast'  onChange={changeFilter}/>
 
 
      <label htmlFor="blur">Blur</label>
-          <input type="range" min={0} max={10} id='blur' value={blur}  onChange={changeBrightness}/>
+          <input type="range" min={0} max={10} id='blur' value={blur}  onChange={changeFilter}/>
 
 
      <label htmlFor="radius">Radius</label>
-          <input type="range" min={0} max={200}  id='border-radius' onChange={changeBrightness}/>
+          <input type="range" min={0} max={200}  id='border-radius' onChange={changeFilter}/>
 
 
     </div>

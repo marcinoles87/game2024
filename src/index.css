@@ -77,6 +77,8 @@ label{
   display: flex;
   flex-direction: column;
   height:400px;
+  padding: 5px;
+  border: 7px solid rgb(67, 238, 29);
 }
 
 .inputs-container{
