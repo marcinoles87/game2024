@@ -7,11 +7,13 @@ function App() {
   const [cordinatesX , setCordinatesX] = useState('')
   const [cordinatesY , setCordinatesY] = useState('')
   const [file , setFileImg] = useState(null);
+  const [isLoad , setLoad] = useState(false);
 
   const [brightness , setBrightness] = useState('100')
   const [contrast , setContrast] = useState('100')
   const [blur , setBlur] = useState('0')
   const [grayScale , setGrayscale] = useState('50');
+
 
   const imageUpload = document.querySelector('.imageUpload');
   const jasnosc = document.querySelector('#jasnosc');
@@ -52,6 +54,7 @@ function App() {
 
   const handleUploadFile = (e) =>{
         setFileImg(URL.createObjectURL(e.target.files[0]))
+        setLoad(true)
 
   }
 
@@ -60,11 +63,13 @@ function App() {
     setBrightness(jasnosc.value)
     setContrast(kontrast.value)
     setGrayscale(grayscale.value)
-    imageUpload.style.filter= `blur(${blur}px) contrast(${contrast}%) brightness(${brightness}%) grayscale(0.${grayScale})`
+    imageUpload.style.filter= `blur(${blur}px) contrast(${contrast}%) brightness(${brightness}%) grayscale(${grayScale}%)`
     imageUpload.style.borderRadius = `${borderRadius.value}px`
     
      console.log(jasnosc.value)
      console.log(blurS.value)
+         console.log(grayScale)
+
   }
 
  
@@ -126,7 +131,8 @@ function App() {
     <div className='image-container'>
 
      
-     <img className='imageUpload' src={file} alt="" ></img>
+     { isLoad ? <img className='imageUpload' src={file} alt="" ></img>  : ''}
+
       <input type="file" onChange={handleUploadFile}></input>
 
     </div>
