@@ -25,6 +25,13 @@
   color:white;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   text-shadow: 7px 4px 10px black;
+  
+}
+
+label{
+  padding: 5px;
+  border: 2px solid black;
+  border-radius: 10px;
 }
 
 .header h2{
@@ -86,8 +93,9 @@ label{
   flex-direction: column;
   width: 400px;
   height: 400px;
+  margin-top: 50px;
   justify-content: center;
-  align-items: flex-start;
+  align-items: center;
 }
 
 .image-container{

@@ -102,27 +102,25 @@ function App() {
     </div>
 
     <div className='inputs-container'>
-
-      
       
       <label htmlFor="jasnosc">Brightness</label>
       <input type="range" min={0} max={99} id='jasnosc'  onChange={changeFilter}/>
 
       <label htmlFor="skala-szarosci">Grayscale</label>
-     <input type="range" min={0} max={99} id='skala-szarosci' onChange={changeFilter}/>
+      <input type="range" min={0} max={99} id='skala-szarosci' onChange={changeFilter}/>
      
      
      
-     <label htmlFor="kontrast">Contrast</label>
-          <input type="range" min={0} max={200} id='kontrast'  onChange={changeFilter}/>
+      <label htmlFor="kontrast">Contrast</label>
+      <input type="range" min={0} max={200} id='kontrast'  onChange={changeFilter}/>
 
 
-     <label htmlFor="blur">Blur</label>
-          <input type="range" min={0} max={10} id='blur' value={blur}  onChange={changeFilter}/>
+       <label htmlFor="blur">Blur</label>
+       <input type="range" min={0} max={10} id='blur' value={blur}  onChange={changeFilter}/>
 
 
-     <label htmlFor="radius">Radius</label>
-          <input type="range" min={0} max={200}  id='border-radius' onChange={changeFilter}/>
+       <label htmlFor="radius">Radius</label>
+       <input type="range" min={0} max={200}  id='border-radius' onChange={changeFilter}/>
 
 
     </div>
