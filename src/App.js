@@ -71,7 +71,8 @@ function App() {
     
      console.log(jasnosc.value)
      console.log(blurS.value)
-         console.log(grayScale)
+     console.log(grayScale)
+     console.log(contrast)
 
   }
 
@@ -115,7 +116,7 @@ function App() {
      
      
       <label htmlFor="kontrast">Contrast</label>
-      <input type="range" min={0} max={200} id='kontrast'  onChange={changeFilter}/>
+      <input type="range" min={0} max={200} id='kontrast' value={contrast}  onChange={changeFilter}/>
 
 
        <label htmlFor="blur">Blur</label>
