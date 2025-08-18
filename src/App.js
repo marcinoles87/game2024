@@ -7,12 +7,12 @@ function App() {
   const [cordinatesX , setCordinatesX] = useState('')
   const [cordinatesY , setCordinatesY] = useState('')
   const [file , setFileImg] = useState(null);
-  const [isLoad , setLoad] = useState(false);
+  
 
   const [brightness , setBrightness] = useState('100')
   const [contrast , setContrast] = useState('100')
   const [blur , setBlur] = useState('0')
-  const [grayScale , setGrayscale] = useState('50');
+  const [grayScale , setGrayscale] = useState('0');
 
 
   const imageUpload = document.querySelector('.imageUpload');
@@ -53,12 +53,15 @@ function App() {
   }
 
   const handleUploadFile = (e) =>{
+        
         setFileImg(URL.createObjectURL(e.target.files[0]))
-        setLoad(true)
+        console.log(imageUpload)
+        
 
   }
 
-  const changeFilter = () =>{
+  const changeFilter = (e) =>{
+    e.preventDefault()
     setBlur(blurS.value)
     setBrightness(jasnosc.value)
     setContrast(kontrast.value)
@@ -98,7 +101,7 @@ function App() {
       <h1>PROJECT</h1>
       <h2>YOUR OWN</h2>
       <h1>AVATAR</h1>
-      <p>INSTA x FACEBOOK x AVATARMODE</p>
+      <p>INSTA x FACEBOOK x AVATARMODE AND MORE...</p>
     </div>
 
     <div className='inputs-container'>
@@ -129,7 +132,7 @@ function App() {
     <div className='image-container'>
 
      
-     { isLoad ? <img className='imageUpload' src={file} alt="" ></img>  : ''}
+     <img className='imageUpload' src={file} alt="" ></img> 
 
       <input type="file" onChange={handleUploadFile}></input>
 
