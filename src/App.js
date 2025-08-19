@@ -21,9 +21,12 @@ function App() {
   const blurS = document.querySelector('#blur');
   const borderRadius = document.querySelector('#border-radius');
   const grayscale = document.querySelector('#skala-szarosci');
+  const root = document.documentElement
+
+  
 
  
-
+ 
   // document.addEventListener( 'click' , (e) =>{
   //   setCordinatesX(e.clientX)
   //   setCordinatesY(e.clientY)
@@ -66,7 +69,8 @@ function App() {
     setBrightness(jasnosc.value)
     setContrast(kontrast.value)
     setGrayscale(grayscale.value)
-    imageUpload.style.filter= `blur(${blur}px) contrast(${contrast}%) brightness(${brightness}%) grayscale(${grayScale}%)`
+    // imageUpload.style.filter= `blur(${blur}px) contrast(${contrast}%) brightness(${brightness}%) grayscale(${grayScale}%)`
+    root.style.setProperty('brightness' , jasnosc.value + '%')
     imageUpload.style.borderRadius = `${borderRadius.value}px`
     
      console.log(jasnosc.value)
