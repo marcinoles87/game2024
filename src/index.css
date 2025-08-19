@@ -7,8 +7,8 @@
 :root{
   --brightness:100%;
   --contrast:100%;
-  --blur:0;
-  --grayscale:0;
+  --blur:0px;
+  --grayscale:0%;
   
 
 }
@@ -41,6 +41,10 @@ label{
   padding: 5px;
   border: 2px solid black;
   border-radius: 10px;
+}
+
+.header{
+  text-align: center;
 }
 
 .header h2{
@@ -94,13 +98,12 @@ label{
   flex-direction: column;
   height:400px;
   padding: 5px;
-  
+
   filter: 
     brightness(var(--brightness))
     blur(var(--blur))
     contrast(var(--contrast))
     grayscale(var(--grayscale));
-  
   
 }
 

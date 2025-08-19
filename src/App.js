@@ -9,10 +9,10 @@ function App() {
   const [file , setFileImg] = useState(null);
   
 
-  const [brightness , setBrightness] = useState('100')
-  const [contrast , setContrast] = useState('100')
-  const [blur , setBlur] = useState('0')
-  const [grayScale , setGrayscale] = useState('0');
+  const [brightness , setBrightness] = useState('')
+  const [contrast , setContrast] = useState('')
+  const [blur , setBlur] = useState('')
+  const [grayScale , setGrayscale] = useState('');
 
 
   const imageUpload = document.querySelector('.imageUpload');
@@ -71,26 +71,10 @@ function App() {
     setGrayscale(grayscale.value)
     imageUpload.style.filter= `blur(${blur}px) contrast(${contrast}%) brightness(${brightness}%) grayscale(${grayScale}%)`
     imageUpload.style.borderRadius = `${borderRadius.value}px`
+   
     
-    
-
   }
 
- 
-
-  const changeContrast = (e) =>{
-    setContrast(e.target.value)
-    //  imageUpload.style.cssText = `filter: brightness(${brightness}px)`
-    imageUpload.style.cssText = `filter: contrast(0.${contrast}px)`
-    // imageUpload.style.cssText = `filter: blur(${blur}px)`
-  }
-
-   const changeBlur = (e) =>{
-    setBlur(e.target.value)
-    imageUpload.style.cssText = `filter: blur(${blur}px)`
-  }
-
-    
    
 
   return (
