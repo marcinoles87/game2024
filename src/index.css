@@ -94,11 +94,12 @@ label{
   flex-direction: column;
   height:400px;
   padding: 5px;
+  
   filter: 
     brightness(var(--brightness))
     blur(var(--blur))
     contrast(var(--contrast))
-    grayscale(var(--grayscale))
+    grayscale(var(--grayscale));
   
   
 }

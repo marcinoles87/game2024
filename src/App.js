@@ -69,14 +69,10 @@ function App() {
     setBrightness(jasnosc.value)
     setContrast(kontrast.value)
     setGrayscale(grayscale.value)
-    // imageUpload.style.filter= `blur(${blur}px) contrast(${contrast}%) brightness(${brightness}%) grayscale(${grayScale}%)`
-    root.style.setProperty('brightness' , jasnosc.value + '%')
+    imageUpload.style.filter= `blur(${blur}px) contrast(${contrast}%) brightness(${brightness}%) grayscale(${grayScale}%)`
     imageUpload.style.borderRadius = `${borderRadius.value}px`
     
-     console.log(jasnosc.value)
-     console.log(blurS.value)
-     console.log(grayScale)
-     console.log(contrast)
+    
 
   }
 
