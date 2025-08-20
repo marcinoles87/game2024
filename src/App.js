@@ -9,10 +9,11 @@ function App() {
   const [file , setFileImg] = useState(null);
   
 
-  const [brightness , setBrightness] = useState('')
-  const [contrast , setContrast] = useState('')
-  const [blur , setBlur] = useState('')
-  const [grayScale , setGrayscale] = useState('');
+  const [brightness , setBrightness] = useState('99')
+  const [contrast , setContrast] = useState('99')
+  const [blur , setBlur] = useState('0')
+  const [grayScale , setGrayscale] = useState('0');
+  const [radius , setRadius] = useState('0');
 
 
   const imageUpload = document.querySelector('.imageUpload');
@@ -69,8 +70,9 @@ function App() {
     setBrightness(jasnosc.value)
     setContrast(kontrast.value)
     setGrayscale(grayscale.value)
-    imageUpload.style.filter= `blur(${blur}px) contrast(${contrast}%) brightness(${brightness}%) grayscale(${grayScale}%)`
-    imageUpload.style.borderRadius = `${borderRadius.value}px`
+    setRadius(borderRadius.value)
+    imageUpload.style.filter= `blur(${blur}px) contrast(${contrast}%) brightness(${brightness}%) grayscale(${grayScale}%) `
+    imageUpload.style.borderRadius = `${radius}px`
    
     
   }
@@ -95,20 +97,20 @@ function App() {
       <input type="range" min={0} max={99} id='jasnosc'  onChange={changeFilter}/>
 
       <label htmlFor="skala-szarosci">Grayscale</label>
-      <input type="range" min={0} max={99} id='skala-szarosci' onChange={changeFilter}/>
+      <input type="range" min={0} max={99} value={grayScale} id='skala-szarosci' onChange={changeFilter}/>
      
      
      
       <label htmlFor="kontrast">Contrast</label>
-      <input type="range" min={0} max={200} id='kontrast' value={contrast}  onChange={changeFilter}/>
+      <input type="range" min={0} max={100} id='kontrast' value={contrast}  onChange={changeFilter}/>
 
 
        <label htmlFor="blur">Blur</label>
-       <input type="range" min={0} max={10} id='blur' value={blur}  onChange={changeFilter}/>
+       <input type="range" min={0} max={10} value={blur} id='blur'   onChange={changeFilter}/>
 
 
        <label htmlFor="radius">Radius</label>
-       <input type="range" min={0} max={200}  id='border-radius' onChange={changeFilter}/>
+       <input type="range" min={0} max={200} value={radius}  id='border-radius' onChange={changeFilter}/>
 
 
     </div>
