@@ -94,7 +94,7 @@ function App() {
     <div className='inputs-container'>
       
       <label htmlFor="jasnosc">Brightness</label>
-      <input type="range" min={0} max={99} id='jasnosc'  onChange={changeFilter}/>
+      <input type="range" min={0} max={99} id='jasnosc' value={brightness}  onChange={changeFilter}/>
 
       <label htmlFor="skala-szarosci">Grayscale</label>
       <input type="range" min={0} max={99} value={grayScale} id='skala-szarosci' onChange={changeFilter}/>
