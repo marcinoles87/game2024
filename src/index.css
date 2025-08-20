@@ -123,3 +123,49 @@ label{
   width: 45%;
   
 }
+
+@media screen and (max-width: 600px) {
+
+  .App{
+    flex-direction: column;
+  }
+
+  .header{
+    width: 100vw;
+    height: 30vh;
+  }
+
+  .header h1{
+    font-size: 3rem;
+  }
+
+  .header h2{
+    font-size: 1.5rem;
+  }
+
+  .header p{
+    font-size: 1rem;
+  }
+
+  .inputs-container{
+    width: auto;
+  }
+
+  label{
+    margin: 0;
+  }
+
+  .image-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    margin: 0;
+  }
+
+  .imageUpload{
+    height: 400px;
+  }
+  
+}
