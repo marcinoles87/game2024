@@ -149,6 +149,7 @@ label{
 
   .inputs-container{
     width: auto;
+    margin: 0;
   }
 
   label{
