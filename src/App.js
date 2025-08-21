@@ -10,7 +10,7 @@ function App() {
   
 
   const [brightness , setBrightness] = useState('99')
-  const [contrast , setContrast] = useState('99')
+  const [contrast , setContrast] = useState('100')
   const [blur , setBlur] = useState('0')
   const [grayScale , setGrayscale] = useState('0');
   const [radius , setRadius] = useState('0');
@@ -102,7 +102,7 @@ function App() {
      
      
       <label htmlFor="kontrast">Contrast</label>
-      <input type="range" min={0} max={100} id='kontrast' value={contrast}  onChange={changeFilter}/>
+      <input type="range" min={0} max={300} id='kontrast' value={contrast}  onChange={changeFilter}/>
 
 
        <label htmlFor="blur">Blur</label>
