@@ -63,6 +63,20 @@ label{
 
 }
 
+.header-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.header-info p{
+  
+  text-shadow: 2px 2px  9px red;
+  font-size: 1.5rem;
+}
+
 
 input{
   width: 60%;

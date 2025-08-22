@@ -89,6 +89,11 @@ function App() {
       <h2>YOUR OWN</h2>
       <h1>AVATAR</h1>
       <p>INSTA x FACEBOOK x AVATARMODE AND MORE...</p>
+      <div className='header-info'>
+         <p>First Add photo</p>
+      <p>Then change value of filter </p>
+      </div>
+     
     </div>
 
     <div className='inputs-container'>
